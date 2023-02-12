@@ -1,9 +1,12 @@
 import Cliente from '../schemas/cliente'
 
-export const indexUseCase = async ({ querymen: { query, select, cursor } }, res, next) => {
+export const indexUseCase = async ({ querymen: { query, select, cursor } }, next) => {
   try {
-    const resultCliente = await Cliente.countDocuments(query, select, cursor)
-    res.status(200).json(resultCliente)
+    const count = await Cliente.countDocuments(query)
+    const rows = await Cliente.find(query, select, cursor)
+      .then(users => users.map(user => user.view()))
+
+    return { count, rows }
   } catch (error) {
     next(error)
   }
