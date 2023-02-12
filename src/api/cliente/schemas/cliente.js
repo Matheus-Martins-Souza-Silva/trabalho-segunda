@@ -3,6 +3,8 @@ import mongoose, { Schema } from 'mongoose'
 const clienteSchema = new Schema({
   name: {
     type: String,
+    index: true,
+    trim: true,
     required: true
   },
   age: {
@@ -11,7 +13,11 @@ const clienteSchema = new Schema({
   },
   email: {
     type: String,
-    required: true
+    match: /^\S+@\S+\.\S+$/,
+    required: true,
+    unique: true,
+    trim: true,
+    lowercase: true
   },
   telephone: {
     type: Number,
@@ -27,6 +33,19 @@ const clienteSchema = new Schema({
     virtuals: true,
     transform: (obj, ret) => { delete ret._id }
   }
+})
+
+clienteSchema.path('email').set(function (email) {
+  if (!this.picture || this.picture.indexOf('https://gravatar.com') === 0) {
+    const hash = crypto.createHash('md5').update(email).digest('hex')
+    this.picture = `https://gravatar.com/avatar/${hash}?d=identicon`
+  }
+
+  if (!this.name) {
+    this.name = email.replace(/^(.+)@.+$/, '$1')
+  }
+
+  return email
 })
 
 clienteSchema.methods = {

@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard"],
+  "env": {
+    "jest": true,
+    "jasmine": true
+  },
+  "rules": {
+    "global-require": 0,
+    "ignoredNodes": ["ConditionalExpression"],
+    "camelcase": "off",
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off"
+  }
+}
