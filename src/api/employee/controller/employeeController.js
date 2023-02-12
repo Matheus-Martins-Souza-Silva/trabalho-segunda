@@ -4,18 +4,18 @@ import { showUseCase } from '../useCases/showUseCase'
 import { updateUseCase } from '../useCases/updateUseCase'
 import { destroyUseCase } from '../useCases/destroyUseCase'
 
-export const create = async ({ user, bodymen: { body } }, res, next) => {
+export const create = async ({ bodymen: { body } }, res, next) => {
   try {
-    const newEmployee = await createUseCase(...body, user)
+    const newEmployee = await createUseCase(body)
     return res.status(200).json(newEmployee)
   } catch (error) {
     next(error)
   }
 }
 
-export const index = async ({ querymen: { query, select, cursor } }, res, next) => {
+export const index = async ({ querymen: { query } }, res, next) => {
   try {
-    const indexEmployee = await indexUseCase(query, select, cursor)
+    const indexEmployee = await indexUseCase(query)
     return res.status(200).json(indexEmployee)
   } catch (error) {
     next(error)

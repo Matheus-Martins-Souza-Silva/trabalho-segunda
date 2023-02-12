@@ -1,9 +1,12 @@
 import Employee from '../schemas/employee'
 
-export const indexUseCase = async ({ querymen: { query, select, cursor } }, res, next) => {
+export const indexUseCase = async (query, select, cursor, next) => {
   try {
-    const indexEmployee = await Employee.countDocuments(query, select, cursor)
-    res.status(200).json(indexEmployee)
+    const count = await Employee.countDocuments(query)
+    const rows = await Employee.find(query, select, cursor)
+      .then(users => users.map(user => user.view()))
+
+    return { count, rows }
   } catch (error) {
     next(error)
   }

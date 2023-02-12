@@ -4,12 +4,12 @@ import { showUseCase } from '../useCases/showUseCase'
 import { updateUseCase } from '../useCases/updateUseCase'
 import { destroyUseCase } from '../useCases/destroyUseCase'
 
-export const create = async ({ bodymen: { body } }, res) => {
+export const create = async ({ bodymen: { body } }, res, next) => {
   try {
     const newcliente = await createUseCase(body)
     return res.status(200).json(newcliente)
   } catch (error) {
-    console.log(error)
+    next(error)
   }
 }
 
