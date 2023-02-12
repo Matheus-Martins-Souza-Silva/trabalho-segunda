@@ -1,0 +1,12 @@
+<header class="IndexMain">
+  <button (click)="onRefreshPage()" class="Index-Icon-Button" routerLink="/principal" routerLinkActive="active" ariaCurrentWhenActive="page"></button>
+  <br/>
+
+  <!--Fix the Rest of Buttons starting from here-->
+  <button (click)="MoveToIndex()" class="Index-Main-Button" routerLink="/principal" routerLinkActive="active" ariaCurrentWhenActive="page"><b>Pagina Inicial</b></button>
+  <button (click)="MoveToProducts()" class="Index-Main-Button"><b>Planos</b></button>
+
+  <button (mouseenter)="onOverLoginButton()" (mouseleave)="onOutLoginButton()" routerLink="/cadastro" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="onLoginAtPage()" class="Login-Icon-Button"></button>
+  <p class="Login-Text"><b>{{loginMessage}}</b></p>
+</header>
+<router-outlet></router-outlet>

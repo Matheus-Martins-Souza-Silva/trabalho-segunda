@@ -1,0 +1,236 @@
+  body::before {
+    content:"";
+    background-size:cover;
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:-1;
+    display:block;
+    background-image: url("https://img.freepik.com/vetores-gratis/fundo-de-formas-abstratas-brancas_79603-1362.jpg?w=1380&t=st=1676153900~exp=1676154500~hmac=8f3f27a2275ba294d9ae5af2a8dcdb7a9c45d8f6764cb3b4de021a0be2f7322a");
+  }
+  
+  .MainHeader {
+    width: 100%;
+    height: 550px;
+    /*background-color:rgba(66, 45, 45, 0.445);*/
+  }
+  .Index-Icon-Button {
+    background-image: url("https://sindjufse.org.br/img/icone-academia-negativo.png?1652358336");
+    object-fit: cover;
+    background-size: 100%;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    padding: 12px 16px;
+    color: white; 
+    border: none;
+    border-radius: 100%;
+    background-color: transparent;
+    top: 15px;
+    position: relative;
+  }
+
+  .Index-Main-Button {
+    width: 150px;
+    height: 48px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border-radius: 15%;
+    position: relative;
+    left: 120px;
+    bottom: 50px;
+    display: inline-block;
+  }
+  
+  .Index-Main-Button:hover {
+    border-radius: 15%;
+    background-color: rgb(33, 97, 216);
+  }
+  
+  .IndexMain {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .IMG-MAIN-HEADER {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 80%; /*80% Padrao*/
+    position: relative;
+    top: 0px;
+  }
+  
+  .Blank-Div {
+    height: 10px;
+  }
+
+  .Login-Icon-Button {
+    background-image: url("https://img.icons8.com/ios/256/login-rounded-right.png");
+    position: absolute;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    top: 20px;
+    border: none;
+    color: transparent;
+    background-size: cover;
+    padding: 12px 16px;
+    object-fit: cover;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .Login-Text {
+    position: absolute;
+    right: 100px;
+    top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  .Frase-Motivacional {
+    position: relative;
+    bottom: 320px;
+    left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .Informacoes-Extra {
+    background-color:rgb(61, 49, 49);
+    height: 310px;
+    position: absolute;
+    width: 100%;
+    background-size: auto;
+  }
+
+  .Texto-Informacoes {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    left: 150px;
+    top: 20px;
+  }
+
+  .Botao-Instagram {
+    position: relative;
+    left: 150px;
+    top: 20px;
+    background-color: transparent;
+    background-image: url("https://freepngimg.com/download/logo/68425-instagram-icon-free-download-image.png");
+    color: transparent;
+    object-fit: cover;
+    border-radius: 0%;
+    border: none;
+    background-size: cover;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+  }
+
+  .Texto-Instagram {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    left: 160px;
+    top: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .Botao-Twitter {
+    position: relative;
+    left: 37px;
+    top: 70px;
+    background-color: transparent;
+    background-image: url("https://icon-library.com/images/instagram-icon-24x24/instagram-icon-24x24-2.jpg");
+    color: transparent;
+    object-fit: cover;
+    border-radius: 0%;
+    border: none;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .Texto-Twitter {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    left: 46px;
+    top: 58px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  .Botao-Facebook {
+    position: relative;
+    right: 52px;
+    top: 110px;
+    background-color: transparent;
+    background-image: url("https://www.fintechfutures.com/files/2016/06/Facebook-280x280.png");
+    color: transparent;
+    object-fit: cover;
+    border-radius: 0%;
+    border: none;
+    background-size: cover;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  .Texto-Facebook {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    right: 40px;
+    top: 103px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .Texto-Contato {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    left: 500px;
+    bottom: 61px;
+  }
+
+  .Contato-Imagem {
+    position: relative;
+    left: 500px;
+    bottom: 60px;
+    background-color: transparent;
+    color: transparent;
+    object-fit: cover;
+    border-radius: 0%;
+    border: none;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+  }
+
+  .Informacoes-Contato {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    left: 555px;
+    bottom: 105px;
+  }
