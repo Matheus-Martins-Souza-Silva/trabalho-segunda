@@ -1,4 +1,4 @@
-  body::before {
+body::before {
     content:"";
     background-size:cover;
     position:fixed;
@@ -106,8 +106,8 @@
   .Informacoes-Extra {
     background-color:rgb(61, 49, 49);
     height: 310px;
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    width: 98.4%;
     background-size: auto;
   }
 
