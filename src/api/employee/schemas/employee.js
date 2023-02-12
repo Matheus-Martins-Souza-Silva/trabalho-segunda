@@ -1,6 +1,6 @@
 import mongoose, { Schema } from 'mongoose'
 
-const clienteSchema = new Schema({
+const employeeSchema = new Schema({
   name: {
     type: String,
     index: true,
@@ -35,7 +35,7 @@ const clienteSchema = new Schema({
   }
 })
 
-clienteSchema.methods = {
+employeeSchema.methods = {
   view (full) {
     const view = {
       // simple view
@@ -54,7 +54,7 @@ clienteSchema.methods = {
   }
 }
 
-const model = mongoose.model('Cliente', clienteSchema)
+const model = mongoose.model('Employee', employeeSchema)
 
 export const schema = model.schema
 export default model

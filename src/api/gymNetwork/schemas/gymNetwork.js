@@ -1,14 +1,10 @@
 import mongoose, { Schema } from 'mongoose'
 
-const clienteSchema = new Schema({
+const gymNetworkSchema = new Schema({
   name: {
     type: String,
     index: true,
     trim: true,
-    required: true
-  },
-  age: {
-    type: Number,
     required: true
   },
   email: {
@@ -35,13 +31,12 @@ const clienteSchema = new Schema({
   }
 })
 
-clienteSchema.methods = {
+gymNetworkSchema.methods = {
   view (full) {
     const view = {
       // simple view
       id: this._id,
       name: this.name,
-      age: this.age,
       email: this.email,
       telephone: this.telephone,
       address: this.address
@@ -54,7 +49,7 @@ clienteSchema.methods = {
   }
 }
 
-const model = mongoose.model('Cliente', clienteSchema)
+const model = mongoose.model('GymNetwork', gymNetworkSchema)
 
 export const schema = model.schema
 export default model
