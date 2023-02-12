@@ -5,7 +5,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { PrincipalComponent } from './principal/principal.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: PrincipalComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'principal', component: PrincipalComponent }
 ];

@@ -293,8 +293,8 @@ body::before {
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: baseline;
-    width: 220px;
-    left: 130px;
+    width: 120px;
+    left: 180px;
   }
   
   .BOTAO_CADASTRO:hover,
