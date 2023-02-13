@@ -3,6 +3,8 @@ import user from './user'
 import auth from './auth'
 import passwordReset from './password-reset'
 import cliente from '../api/cliente/routes/cliente.routes'
+import employee from '../api/employee/routes/employee.routes'
+import gymNetwork from '../api/gymNetwork/routes/gymNetwork.routes'
 
 const router = new Router()
 
@@ -33,5 +35,7 @@ router.use('/users', user)
 router.use('/auth', auth)
 router.use('/password-resets', passwordReset)
 router.use('/clientes', cliente)
+router.use('/employees', employee)
+router.use('/gymNetworks', gymNetwork)
 
 export default router

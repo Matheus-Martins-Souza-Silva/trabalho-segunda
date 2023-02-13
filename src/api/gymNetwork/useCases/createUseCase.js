@@ -9,6 +9,6 @@ export const createUseCase = async (body, res, next) => {
     })
     res.status(201).json(newGymNetwork)
   } catch (error) {
-    return next(error)
+    console.log(error)
   }
 }
