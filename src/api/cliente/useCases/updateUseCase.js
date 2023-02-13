@@ -10,6 +10,6 @@ export const updateUseCase = async (body, params, res, next) => {
 
     res.status(200).json(updateCliente)
   } catch (error) {
-    next(error)
+    console.log(error)
   }
 }

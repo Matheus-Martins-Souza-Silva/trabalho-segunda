@@ -8,6 +8,6 @@ export const indexUseCase = async (query, select, cursor, next) => {
 
     return { count, rows }
   } catch (error) {
-    next(error)
+    console.log(error)
   }
 }

@@ -8,6 +8,6 @@ export const showUseCase = async (id, next) => {
 
     return showCliente.view(true)
   } catch (error) {
-    next(error)
+    console.log(error)
   }
 }

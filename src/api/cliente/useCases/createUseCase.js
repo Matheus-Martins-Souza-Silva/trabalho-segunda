@@ -9,6 +9,6 @@ export const createUseCase = async (body, res, next) => {
     })
     return res.status(201).json(cliente)
   } catch (error) {
-    next(error)
+    console.log(error)
   }
 }

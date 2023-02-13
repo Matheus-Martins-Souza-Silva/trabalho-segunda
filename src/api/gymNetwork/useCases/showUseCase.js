@@ -8,6 +8,6 @@ export const showUseCase = async (id, next) => {
 
     return showGymNetwork.view(true)
   } catch (error) {
-    return next(error)
+    console.log(error)
   }
 }
